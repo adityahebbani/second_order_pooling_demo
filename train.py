@@ -19,8 +19,7 @@ model = models.Sequential([
     layers.MaxPooling2D(pool_size=(2, 2)),
     layers.Conv2D(64, (3, 3), activation='relu'),
     layers.MaxPooling2D(pool_size=(2, 2)),
-    # SecondOrderPooling(), # receives feature map of 7x7x64
-    layers.Flatten(),
+    SecondOrderPooling(), # receives feature map of 7x7x64
     layers.Dense(128, activation='relu'),
     layers.Dense(10, activation='softmax')
 ])
@@ -33,6 +32,6 @@ with tf.device('/GPU:0'):
     model.fit(x_train, y_train, epochs=10, batch_size=32, validation_data=(x_test, y_test))
 
 # Save the trained model in SavedModel format
-# model.save('second_order_pooling_model.keras')
-model.save('test_model.keras')
+model.save('second_order_pooling_model.keras')
+
 
