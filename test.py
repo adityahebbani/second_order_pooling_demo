@@ -13,7 +13,7 @@ x_test = x_test.astype('float32') / 255.0
 x_test = x_test.reshape(-1, 28, 28, 1)
 
 # Load the model from the SavedModel format
-model = tf.keras.models.load_model('second_order_pooling_model.keras', custom_objects={'SecondOrderPooling': SecondOrderPooling})
+model = tf.keras.models.load_model('second_order_pooling_model', custom_objects={'SecondOrderPooling': SecondOrderPooling})
 
 # Make predictions on the test set
 predictions = model.predict(x_test)
