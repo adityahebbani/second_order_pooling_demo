@@ -6,7 +6,9 @@ import numpy as np
 from layers import SecondOrderPooling
 
 # Load the Fashion MNIST dataset
-(_, _), (x_test, y_test) = datasets.fashion_mnist.load_data()
+# (_, _), (x_test, y_test) = datasets.fashion_mnist.load_data()
+(x_train, y_train), (x_test, y_test) = datasets.cifar10.load_data()
+
 
 # Normalize and reshape test data
 x_test = x_test.astype('float32') / 255.0
