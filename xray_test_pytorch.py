@@ -7,7 +7,7 @@ import seaborn as sns
 from torchvision import transforms
 from torch.utils.data import DataLoader, Dataset
 from sklearn.metrics import classification_report, accuracy_score, confusion_matrix, f1_score
-from layers import SecondOrderPooling  # Ensure you have this module if used in the model
+from pytorch_layers import SecondOrderPooling  # Ensure you have this module if used in the model
 from xray_train_pytorch import NIHChestXrayCNN  # Make sure this matches your training script's model definition
 from tqdm import tqdm
 import os

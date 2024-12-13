@@ -8,7 +8,7 @@ import pandas as pd
 from torchvision import transforms
 from torch.utils.data import Dataset, DataLoader
 from PIL import Image
-from layers import SecondOrderPooling  # Ensure this is the PyTorch implementation
+from pytorch_layers import SecondOrderPooling  # Ensure this is the PyTorch implementation
 from tqdm import tqdm
 from sklearn.model_selection import train_test_split
 import numpy as np
